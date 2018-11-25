@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
@@ -19,6 +20,15 @@ namespace BJSSTech2
             string username = ("kelly-1993@live.co.uk");
             string password = ("BJSSTest");
             string url = ("http://automationpractice.com/index.php");
+
+            /*To run tests Headless using chrome (remember to change the driver above when doing this
+             * (insert this before driver.Navigate()...etc
+             */
+
+            //var chromeOptions = new ChromeOptions();
+            //chromeOptions.AddArgument("--headless");
+            //driver = new ChromeDriver(chromeOptions);
+
 
             driver.Navigate().GoToUrl(url);
             driver.Manage().Window.Maximize();
